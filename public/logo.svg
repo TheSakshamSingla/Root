@@ -1,0 +1,24 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="60" fill="#121212"/>
+  
+  <!-- Android silhouette -->
+  <path d="M80 50H40C37.2386 50 35 52.2386 35 55V85C35 87.7614 37.2386 90 40 90H80C82.7614 90 85 87.7614 85 85V55C85 52.2386 82.7614 50 80 50Z" fill="#2D2D2D"/>
+  
+  <!-- Android antennae -->
+  <path d="M50 50V40" stroke="#00e676" stroke-width="4" stroke-linecap="round"/>
+  <path d="M70 50V40" stroke="#00e676" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Android eyes -->
+  <circle cx="50" cy="65" r="4" fill="#00e676"/>
+  <circle cx="70" cy="65" r="4" fill="#00e676"/>
+  
+  <!-- Root symbol (#) -->
+  <path d="M55 75H65" stroke="#00e676" stroke-width="4" stroke-linecap="round"/>
+  <path d="M55 85H65" stroke="#00e676" stroke-width="4" stroke-linecap="round"/>
+  <path d="M50 70V90" stroke="#00e676" stroke-width="4" stroke-linecap="round"/>
+  <path d="M70 70V90" stroke="#00e676" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Superuser lightning bolt -->
+  <path d="M30 30L35 20H45L40 30H50L30 50L35 30H30Z" fill="#00b0ff"/>
+</svg> 

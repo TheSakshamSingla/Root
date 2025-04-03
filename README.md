@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Root Things
 
-## Getting Started
+<p align="center">
+  <img src="/public/logo.svg" alt="Root Things Logo" width="120" height="120">
+</p>
 
-First, run the development server:
+<p align="center">
+  Your comprehensive resource for Android rooting, customization, and advanced tweaks
+</p>
+
+## About Root Things
+
+Root Things is a community-driven platform for Android enthusiasts interested in rooting, customization, and system modifications. Our mission is to provide accessible, reliable information and tools to help users take full control of their Android devices.
+
+## Features
+
+- **Rooting Guides**: Step-by-step instructions for rooting various Android devices
+- **Magisk Modules**: Curated collection of useful Magisk modules
+- **Advanced Guides**: Tutorials for root users to enhance their Android experience
+- **Community Contributions**: Platform for community members to share knowledge
+
+## Quick Start
+
+This website is built using [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/).
 
 ```bash
+# Clone the repository
+git clone https://github.com/rootthings/root-things.git
+
+# Install dependencies
+cd root-things
+npm install
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Add or update modules
+- Create guides
+- Improve the website
+- Report bugs
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Connect With Us
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Telegram Channel](https://t.me/Rootthings)
+- [GitHub](https://github.com/rootthings)
 
-## Deploy on Vercel
+## Acknowledgements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- All contributors who have shared their knowledge
+- The Magisk and Android modding community
+- All open-source projects that have made this possible
