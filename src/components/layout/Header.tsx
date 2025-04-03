@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { IconHome, IconTerminal, IconPackage, IconBook, IconInfoCircle, IconMenu2, IconX } from "@tabler/icons-react";
 
 const navLinks = [
@@ -68,43 +68,47 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden flex items-center justify-center bg-[#1a1a1a] hover:bg-[#2d2d2d] p-2 rounded-lg transition-colors"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-        >
-          {isOpen ? 
-            <IconX size={32} stroke={1.5} className="text-[#00e676]" /> : 
-            <IconMenu2 size={32} stroke={1.5} className="text-[#00e676]" />
-          }
-        </button>
-      </div>
-
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <motion.div 
-          className="md:hidden absolute top-[60px] left-0 right-0"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.2 }}
-        >
-          <div className="bg-[#0f0f0f] border-t border-[#222] shadow-xl">
-            {navLinks.map((link, i) => (
-              <Link 
-                key={link.href} 
-                href={link.href}
-                className="flex items-center p-4 px-6 text-gray-200 hover:bg-[#1a1a1a] hover:text-[#00e676] transition-all"
-                onClick={() => setIsOpen(false)}
+        {/* Mobile Menu Button - Always visible for smaller screens */}
+        <div className="md:hidden relative">
+          <button 
+            className="flex items-center justify-center bg-[#1a1a1a] hover:bg-[#2d2d2d] p-2 rounded-lg transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+          >
+            {isOpen ? 
+              <IconX size={32} stroke={1.5} className="text-[#00e676]" /> : 
+              <IconMenu2 size={32} stroke={1.5} className="text-[#00e676]" />
+            }
+          </button>
+          
+          {/* Mobile Navigation - Always visible on hover */}
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div 
+                className="absolute top-[52px] right-0 w-64 z-50"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2 }}
               >
-                <span className="w-8 text-[#00e676]">{link.icon}</span>
-                <span className="text-lg font-medium">{link.label}</span>
-              </Link>
-            ))}
-          </div>
-        </motion.div>
-      )}
+                <div className="bg-[#0f0f0f] border border-[#222] rounded-lg shadow-xl overflow-hidden">
+                  {navLinks.map((link) => (
+                    <Link 
+                      key={link.href} 
+                      href={link.href}
+                      className="flex items-center p-4 px-6 text-gray-200 hover:bg-[#1a1a1a] hover:text-[#00e676] transition-all"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <span className="w-8 text-[#00e676]">{link.icon}</span>
+                      <span className="text-lg font-medium">{link.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </div>
     </header>
   );
 } 
